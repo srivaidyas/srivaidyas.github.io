@@ -5,7 +5,7 @@ title: Student Blog
 
 
 
-## Sri's CSP Home Page 123
+## Sri's CSP Home Page 
 CSP Blog: August 2023 - June 2024
 
 <br>
