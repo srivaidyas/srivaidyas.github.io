@@ -9,8 +9,14 @@ title: Student Blog
 CSP Blog: August 2023 - June 2024
 
 <br>
-About Me: I'm Sri, a sophomore here at Del Norte, and I love to explore new places, bike and learn new stuff. I'm part of **Best Buddies** and **EIA**, a tutoring club at Del Norte. I've been to 4 countries around the world and a lot of places within ***San Deigo*** throughout my stay. <br><br>
-Here's a little about me in the form of a ***freeform drawing***
+
+
+👨🏾‍💻 I'm Sri, a sophomore here at Del Norte, and I love to explore new places, bike and learn new stuff.<br>
+🏫 I'm part of **Best Buddies** and **EIA**, a tutoring club at Del Norte.<br>
+🌎 I've been to 4 countries around the world and a lot of places within ***San Deigo*** throughout my stay.<br>
+🏈 I love to play badmindton, cricket, football etc<br>
+⬇️ Here's a little about me in the form of a ***freeform drawing***
+
 <br>
 <center>
 <img src="images/IMG_9732-1.jpg" alt="aboutme" width="200" height="300">
