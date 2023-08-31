@@ -8,6 +8,7 @@ type: plans
 courses: { compsci: {week: 1} }
 ---
 
+
 #### Week 1 summary of code and problems faced
 
 
