@@ -11,8 +11,6 @@ courses: { compsci: {week: 2} }
 ### Summary of Accomplishments
 > Update Blog to contain all hacks.  
 - Reviewed with Pair.  Discuss/Show evidence.
-- Discuss laptop, cloud computer.
-- Discuss tools setup and troubles.
 - Show personal blog / home page.
 - Show how you are maintaining notes, answering hacks, and showing tangibles.  
 - How have you learned Markdown, HTML, CSS, JavaScript.
