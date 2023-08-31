@@ -88,5 +88,4 @@ On Friday we started really coding into new blogs and also use new code such as 
     <td>###</td>
     <td>Highlights the peice of text as a heading. The larger it gets the smaller the heading.</td>
     <td>Week 1</td>
- </tr>
- </table>
+ 
