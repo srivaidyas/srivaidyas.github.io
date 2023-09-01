@@ -20,9 +20,25 @@ We started off just where we left off on Tuesday, gith pages. We managed to fix 
 
 
 #### Thursday
+We stated off Thursday by review of the live review whihc we had signed up for with Mr. Lopez. WE took our time and resolved the few issues we face that morning. We then sat down for our live review and explanined all that we had done for the past week, week and half. We then talked about a few independent projects we had done, a few changes we had made to our index.md file, then showed the new code(s) that we had implemented into our website including the calculator and the few games as well. WE then talked about a few errors and overally concluded a good presentation. The score we recvied was 1.85.
 
 
 #### Friday
+Today was a work form home day for me as I'd taken the day off from school for I'd fallen sick. I checked slack and canvas for any new things that had to be done. On slack there were two new messages as to what had to be prepared for next weeks pair showcase, aka the code code coding project. First off i started off by create two new post, one for week 3 plans and the other for week 3 summary. Then for the week 3 plans I used utterance with git to make a comment/post in the form of next week's plans which included all the basic stuff we needed to to get a good grade on the 5 point assignment. Here's the code to make an utternce post work on your site
+
+```html
+<script src="https://utteranc.es/client.js"
+    repo="yourusername/yourrepository"
+    issue-term="pathname"
+    label="comments"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>`
+```
+
+
+
 
 
 <br><br>

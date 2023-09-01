@@ -4,7 +4,7 @@ comments: false
 layout: post
 title: Snake Game
 description: This is a Javascript Snake game
-type: tangibles
+type: hacks
 courses: { compsci: {week: 2} }
 ---
 
