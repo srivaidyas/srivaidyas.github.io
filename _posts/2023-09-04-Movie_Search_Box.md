@@ -233,7 +233,7 @@ courses: { compsci: {week: 3} }
 
 
 
-<h3> Attribution </h3>
+<h4> Attribution </h4>
 
 <center>
 <img src = "_site/images/hellowe.png" alt= "The TMDb logo" width= "200" height= "200">
