@@ -43,7 +43,7 @@ Link to table
 <br>
 Javascript Wikipedia Search with API
 
-<h3>Wikipedia Search Summary Code Explained<h3><br>
+<h3>Wikipedia Search Summary Code Explained</h3><br>
 
 ***HTML**
 1. HTML Head
@@ -55,7 +55,7 @@ Javascript Wikipedia Search with API
 - Holds the content, like the search box and area to show Wikipedia summaries.
 
 
-<h3>CSS<h3>
+<h3>CSS</h3>
 
 1. Global Styles
 
@@ -65,7 +65,7 @@ Makes the whole page and buttons look nice.
 
 Makes the summary area and its text look nice.
 
-<h3>JavaScript<h3>
+<h3>JavaScript</h3>
 
 1. searchWikipedia() Function
 
@@ -102,4 +102,70 @@ Makes the summary area and its text look nice.
 9. Catch Errors
 
 - If something goes wrong, it shows an error message.
+
+[Wikipedia Search Bar](https://srivaidyas.github.io/student//2023/09/05/Wikipedia-Search_Bar.html)
+
+<br><br>
+
+***Python IO Input and Output Quiz***
+
+Custom Quiz About Simple Python Functions
+Quiz project in python
+How to build your own quiz in python
+<br>
+In python there are a variety of ways to code a quiz. You can use basic print statements and input functions or you can use for loops to make the same quiz more concise.
+<br>
+The provided code is a basic quiz program that interacts with users. Here are the elements that make up most of the code:<br>
+
+- import getpass, sys: This imports the modules.
+
+- def question_with_answers(prompt): This defines a function that prints a question, collects user input as an answer, and stores the answer
+
+- questions = 3: This is the total number of questions in the quiz.
+
+- correct_answers = 0: This variable keeps track of the amout of correct answers.
+
+- question_list: This list contains the questions for the quiz.
+
+- ans_list: This list holds the correct answers corresponding to the questions.<br>
+
+The for loop iterates over each question:
+
+- rsp = question_with_answers(question_list[i]): This line asks the user a question and stores their response into a variable
+
+- if ans_list[i] == rsp:: This checks if the user's response matches the correct answer.
+
+- If the answer is correct, correct_answers added by one, and a success message is displayed.
+
+- If the answer is incorrect, an print message is shown to help them know they got the question wrong<br>
+
+At the end code displays a completion message for the quiz and calculates the user's percentage score.
+
+<br>
+
+Link to the Quiz<br>
+[Python IO QUiz](http://127.0.0.1:4200/student//2023/08/25/quiz.py_IPYNB_2_.html)
+
+<h3>JS API Movie Search Box</h3>
+
+<br>
+
+This search box uses JavaScript API so extract details from The Movie Database using an API created at that website. It then formats it to produce 8 major details, the name, the movie/series's poster, overview, rating, release date, genre, Mpaa rating aswell as using the input from the dynamic script and using it to search for trailers about the movie across youtube. Most of the code was done using the air of helpful tools such as my family, friends and chat, but I've done the code of the CSS formatting, genre and Mpaa maping.
+
+<h4> Parts of the code </h4>
+
+
+1. <b>fetchMovieData(searchTerm)</b> :This function is responsible for fetching and displaying movie/TV series data based on the search term entered by the user.<br><br>
+
+2. <b>getGenre(genreIds)</b>: This function takes an array of genre IDs and returns a string containing the corresponding genre names. It's used to map genre IDs to their names.<br><br>
+
+3. <b>getMPAARating(contentRatings)</b>: This function takes content ratings data and returns the MPAA rating in a user-friendly format. It maps MPAA ratings from codes to their full names.<br><br>
+
+4. <b>getOriginalLanguage(languageCode)</b>: This function takes a language code and returns the full name of the language. It's used to display the original language of the movie/TV series.<br><br>
+
+5. <b>formatDate(dateString)</b>: This function formats a date string (release date) in the "month/day/year" format. It's used to format the release date for display.<br><br>
+
+6. <b>getYouTubeTrailerLink(searchTerm)</b>: This function constructs a YouTube trailer search link based on the search term entered by the user. It's used to provide a link to search for the movie's trailer on YouTube.<br><br>
+
+
 

@@ -225,11 +225,83 @@ courses: { compsci: {week: 3} }
 
 
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br>
 
-<h4>Different functions used in the code<h4>
+<h4> Parts of the code </h4>
+
+
+1. <b>fetchMovieData(searchTerm)</b> :This function is responsible for fetching and displaying movie/TV series data based on the search term entered by the user.<br><br>
+
+2. <b>getGenre(genreIds)</b>: This function takes an array of genre IDs and returns a string containing the corresponding genre names. It's used to map genre IDs to their names.<br><br>
+
+3. <b>getMPAARating(contentRatings)</b>: This function takes content ratings data and returns the MPAA rating in a user-friendly format. It maps MPAA ratings from codes to their full names.<br><br>
+
+4. <b>getOriginalLanguage(languageCode)</b>: This function takes a language code and returns the full name of the language. It's used to display the original language of the movie/TV series.<br><br>
+
+5. <b>formatDate(dateString)</b>: This function formats a date string (release date) in the "month/day/year" format. It's used to format the release date for display.<br><br>
+
+6. <b>getYouTubeTrailerLink(searchTerm)</b>: This function constructs a YouTube trailer search link based on the search term entered by the user. It's used to provide a link to search for the movie's trailer on YouTube.<br><br>
+
+
+
+
+
+<h4> Different mapping used in this code</h4>
+
 <br>
-1. 
+
+1. Genre mapping <br>
+            28: "Action", <br>
+            12: "Adventure",<br>
+            16: "Animation",<br>
+            35: "Comedy",<br>
+            80: "Crime",<br>
+            99: "Documentary",<br>
+            18: "Drama",<br>
+            10751: "Family",<br>
+            14: "Fantasy",<br>
+            36: "History",<br>
+            27: "Horror",<br>
+            10402: "Music",<br>
+            9648: "Mystery",<br>
+            10749: "Romance",<br>
+            878: "Science Fiction",<br>
+            10770: "TV Movie",<br>
+            53: "Thriller",<br>
+            10752: "War",<br>
+            37: "Western",<br>
+<br>
+
+2. Language Mapping <br>
+            "en": "English",<br>
+            "es": "Spanish",<br>
+            "fr": "French",<br>
+            "de": "German",<br>
+            "el": "Greek",<br>
+            "ga": "Irish",<br>
+            "hi": "Hindi",<br>
+            "ru": "Russian",<br>
+            "ta": "Tamil",<br>
+            "zh": "Chinese",<br>
+            "ko": "Korean",<br>
+
+<br>
+
+3. MPAA rating mapping<br>
+            "G": "General Audiences",<br>
+            "PG": "Parental Guidance Suggested",<br>
+            "PG-13": "Parents Strongly Cautioned",<br>
+            "TV-14": "For TV Shows above 14",<br>
+            "R": "Restricted",<br>
+            "NC-17": "Adults Only",<br>
+            "NR": "Not Rated",<br>
+            "Unrated": "Unrated",<br>
+
+<br>
+
+
+
+
 
 
 
