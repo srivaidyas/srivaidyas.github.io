@@ -19,15 +19,13 @@ courses: { compsci: {week: 3} }
 
 
 
-
-
 <html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie/TV Series Search</title>
-       <style>
+     <style>
         /* CSS styles for the search bar */
         #searchInput {
             width: 300px; 
@@ -37,6 +35,7 @@ courses: { compsci: {week: 3} }
             padding: 5px 10px; 
         }
     </style>
+
 </head>
 <body>
     <div class="container">
@@ -75,17 +74,38 @@ courses: { compsci: {week: 3} }
             53: "Thriller",
             10752: "War",
             37: "Western",
+            // Add more genre mappings as needed
         };
+
 
         // MPAA rating mapping
         const mpaaRatingMap = {
             "G": "General Audiences",
             "PG": "Parental Guidance Suggested",
             "PG-13": "Parents Strongly Cautioned",
+            "TV-14": "For TV Shows above 14",
             "R": "Restricted",
             "NC-17": "Adults Only",
             "NR": "Not Rated",
             "Unrated": "Unrated",
+            // Add more MPAA rating mappings as needed
+        };
+        
+
+        // Language mapping
+        const languageMap = {
+            "en": "English",
+            "es": "Spanish",
+            "fr": "French",
+            "de": "German",
+            "el": "Greek",
+            "ga": "Irish",
+            "hi": "Hindi",
+            "ru": "Russian",
+            "ta": "Tamil",
+            "zh": "Chinese",
+            "ko": "Korean",
+            // Add more language mappings as needed
         };
 
         // Event listener for the search button
@@ -121,12 +141,16 @@ courses: { compsci: {week: 3} }
                             ? `Ratings: ${result.vote_average} / 10`
                             : "Ratings: N/A";
                         const releaseDate = result.release_date || result.first_air_date || "Release Date: N/A";
+                        const formattedReleaseDate = formatDate(releaseDate);
                         const genre = result.genre_ids
                             ? `Genre: ${getGenre(result.genre_ids)}`
                             : "Genre: N/A";
                         const mpaaRating = result.content_ratings
                             ? `MPAA Rating: ${getMPAARating(result.content_ratings)}`
                             : "MPAA Rating: N/A";
+                        const originalLanguage = result.original_language
+                            ? `Original Language: ${getOriginalLanguage(result.original_language)}`
+                            : "Original Language: N/A";
                         const posterPath = result.poster_path
                             ? `https://image.tmdb.org/t/p/w300${result.poster_path}`
                             : "https://via.placeholder.com/300x450"; // Placeholder image if no poster available;
@@ -138,9 +162,10 @@ courses: { compsci: {week: 3} }
                             <img src="${posterPath}" alt="${title} Poster" style="max-width: 300px; height: auto;">
                             <p>${overview}</p>
                             <p>${ratings}</p>
-                            <p>${releaseDate}</p>
+                            <p>${formattedReleaseDate}</p>
                             <p>${genre}</p>
                             <p>${mpaaRating}</p>
+                            <p>${originalLanguage}</p>
                             <p><a href="${youtubeTrailerLink}" target="_blank">Watch Trailer on YouTube</a></p>
                         `;
 
@@ -170,6 +195,20 @@ courses: { compsci: {week: 3} }
             }
         }
 
+        // Function to get the full language name
+        function getOriginalLanguage(languageCode) {
+            return languageMap[languageCode] || "N/A";
+        }
+
+        // Function to format the date as month/day/year
+        function formatDate(dateString) {
+            if (!dateString) return "Release Date: N/A";
+
+            const date = new Date(dateString);
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            return "Release Date: " + date.toLocaleDateString('en-US', options);
+        }
+
         // Function to construct a YouTube trailer link based on the search term
         function getYouTubeTrailerLink(searchTerm) {
             // Replace spaces with plus signs and add "trailer" for a more specific search
@@ -185,15 +224,18 @@ courses: { compsci: {week: 3} }
 
 
 
+
 <br><br><br><br><br><br><br>
 
-
+<h4>Different functions used in the code<h4>
+<br>
+1. 
 
 
 
 <h3> Attribution </h3>
 
 <center>
-<img src = "_site/images/hellowe.png" alt="TMDb" width="200" length="200">
+<img src = "_site/images/hellowe.png" alt= "The TMDb logo" width= "200" height= "200">
 </center>
 This product uses the TMDB API but is not endorsed or certified by TMDB
