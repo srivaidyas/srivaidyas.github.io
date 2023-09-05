@@ -8,7 +8,20 @@ type: hacks
 courses: { compsci: {week: 3} }
 ---
 
-<!DOCTYPE html>
+***Link to the original website:*** [The Movie Database (TMDb)](https://www.themoviedb.org/?language=en-US) 
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+<html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -166,3 +179,21 @@ courses: { compsci: {week: 3} }
     </script>
 </body>
 </html>
+
+
+
+
+
+
+<br><br><br><br><br><br><br>
+
+
+
+
+
+<h3> Attribution </h3>
+
+<center>
+<img src = "_site/images/hellowe.png" alt="TMDb" width="200" length="200">
+</center>
+This product uses the TMDB API but is not endorsed or certified by TMDB
