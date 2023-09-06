@@ -48,10 +48,10 @@ courses: { compsci: {week: 3} }
         const searchButton = document.getElementById('searchButton');
         const resultDiv = document.getElementById('result');
 
-        // TMDb API key (replace with your own)
+        
         const apiKey = '8b9514e6242bb1620afcbec32775e783';
 
-        // Genre mapping
+        
         const genreMap = {
                12: "Adventure",
                14: "Fantasy",
@@ -79,11 +79,11 @@ courses: { compsci: {week: 3} }
                10767: "Talk",
                10768: "War & Politics",
                878: "Science Fiction",
-            // Add more genre mappings as needed
+            
         };
 
 
-        // MPAA rating mapping
+       
         const mpaaRatingMap = {
             "G": "General Audiences",
             "PG": "Parental Guidance Suggested",
@@ -93,11 +93,11 @@ courses: { compsci: {week: 3} }
             "NC-17": "Adults Only",
             "NR": "Not Rated",
             "Unrated": "Unrated",
-            // Add more MPAA rating mappings as needed
+            
         };
         
 
-        // Language mapping
+        
         const languageMap = {
             "en": "English",
             "es": "Spanish",
@@ -111,7 +111,7 @@ courses: { compsci: {week: 3} }
             "zh": "Chinese",
             "ko": "Korean",
             "ml": "Malayalam",
-            // Add more language mappings as needed
+            
         };
 
         // Event listener for the search button
@@ -119,20 +119,20 @@ courses: { compsci: {week: 3} }
             const searchTerm = searchInput.value.trim();
 
             if (searchTerm) {
-                // Clear previous results
+
                 resultDiv.innerHTML = '';
 
-                // Call the function to fetch and display movie/TV series data
+                
                 fetchMovieData(searchTerm);
             }
         });
 
-        // Function to fetch and display movie/TV series data
+        
         function fetchMovieData(searchTerm) {
             // Construct the TMDb API URL for searching movies/TV series
             const apiUrl = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${encodeURIComponent(searchTerm)}`;
 
-            // Make the API request
+            
             fetch(apiUrl)
                 .then((response) => response.json())
                 .then((data) => {
@@ -140,7 +140,7 @@ courses: { compsci: {week: 3} }
                         // Get the first result (most relevant)
                         const result = data.results[0];
 
-                        // Extract relevant information
+
                         const title = result.title || result.name || "Title: N/A";
                         const overview = result.overview || "Overview: N/A";
                         const ratings = result.vote_average
@@ -162,7 +162,7 @@ courses: { compsci: {week: 3} }
                             : "https://via.placeholder.com/300x450"; // Placeholder image if no poster available;
                         const youtubeTrailerLink = getYouTubeTrailerLink(searchTerm);
 
-                        // Update the summary with selected information
+                        
                         const updatedSummary = `
                             <h2>${title}</h2>
                             <img src="${posterPath}" alt="${title} Poster" style="max-width: 300px; height: auto;">
@@ -185,13 +185,13 @@ courses: { compsci: {week: 3} }
                 });
         }
 
-        // Function to get the genre names based on genre IDs
+        
         function getGenre(genreIds) {
             const genres = genreIds.map((id) => genreMap[id] || "Unknown");
             return genres.join(', ');
         }
 
-        // Function to get the MPAA rating
+        
         function getMPAARating(contentRatings) {
             if (contentRatings && contentRatings.length > 0) {
                 const rating = contentRatings[0].rating;
@@ -201,12 +201,12 @@ courses: { compsci: {week: 3} }
             }
         }
 
-        // Function to get the full language name
+        
         function getOriginalLanguage(languageCode) {
             return languageMap[languageCode] || "N/A";
         }
 
-        // Function to format the date as month/day/year
+        
         function formatDate(dateString) {
             if (!dateString) return "Release Date: N/A";
 
@@ -215,9 +215,9 @@ courses: { compsci: {week: 3} }
             return "Release Date: " + date.toLocaleDateString('en-US', options);
         }
 
-        // Function to construct a YouTube trailer link based on the search term
+        
         function getYouTubeTrailerLink(searchTerm) {
-            // Replace spaces with plus signs and add "trailer" for a more specific search
+            
             const youtubeSearchQuery = encodeURIComponent(`${searchTerm} trailer`);
             return `https://www.youtube.com/results?search_query=${youtubeSearchQuery}`;
         }
@@ -232,7 +232,7 @@ courses: { compsci: {week: 3} }
 
 <br><br><br><br><br>
 
-<h4> Parts of the code </h4>
+<h3> Parts of the code </h3>
 
 
 1. <b>fetchMovieData(searchTerm)</b> :This function is responsible for fetching and displaying movie/TV series data based on the search term entered by the user.<br><br>
@@ -251,7 +251,7 @@ courses: { compsci: {week: 3} }
 
 
 
-<h4> Different mapping used in this code</h4>
+<h3> Different mapping used in this code</h3>
 
 <br>
 
@@ -305,6 +305,37 @@ courses: { compsci: {week: 3} }
 <br>
 
 
+<h3>Code explanation</h3>
+
+<p>This JavaScript code is designed to create a simple web application for searching and displaying details about movies and TV series using the TMDb (The Movie Database) API. The code begins by defining event listeners, specifically for a search button click. When the search button is clicked, it triggers a function to fetch and display movie/TV series data.</p><br>
+
+<p>Inside the fetchMovieData function, the TMDb API URL is constructed based on the user's search term, and a fetch request is made to the API. The received JSON data is processed to extract relevant information about the first result, such as title, overview, ratings, release date, genre, MPAA rating, original language, and poster image.</p><br>
+
+<p>Notably, the release date is formatted using the formatDate function, and the genre and MPAA rating are looked up in predefined mapping objects (genreMap and mpaaRatingMap) to provide human-readable values. The code also constructs a link to search for a trailer on YouTube based on the user's search term.</p><br>
+
+<p>The final result is an HTML page where users can enter a movie or TV series name, click the search button, and receive a summary of the selected media's details. If no results are found, a message indicating so is displayed. The code is structured to make the user interface clean and straightforward while providing rich information about the searched media.</p><br>
+
+
+<h3>Utility fucntion explanation</h3>
+
+<p>This code defines several utility functions that are used within the main code to format and retrieve specific information:</p><br>
+
+1. getGenre(genreIds): This function takes an array of genre IDs as input and maps them to their corresponding genre names using the genreMap object. If a genre ID is not found in the map, it defaults to "Unknown" and returns a comma-separated string of genre names.<br><br>
+
+2. getMPAARating(contentRatings): This function extracts the MPAA (Motion Picture Association of America) rating from the contentRatings array. It looks for the rating in the first element of the array and maps it to a human-readable rating using the mpaaRatingMap object. If no rating is found, it returns "N/A."<br><br>
+
+3. getOriginalLanguage(languageCode): This function takes a language code as input and looks up the full language name from the languageMap object. If the language code is not found, it returns "N/A."<br><br>
+
+4. formatDate(dateString): This function formats a date string (in the format provided by the TMDb API) into a more readable "Month/Day/Year" format using JavaScript's toLocaleDateString method. If the input date string is empty or undefined, it returns "Release Date: N/A."<br><br>
+
+5. getYouTubeTrailerLink(searchTerm): This function constructs a YouTube search query for a trailer based on the user's search term. It appends " trailer" to the search term, encodes it for a URL, and returns a URL to the YouTube search results for that query.<br><br>
+
+<p>These utility functions are crucial for transforming and presenting data retrieved from the TMDb API in a user-friendly and informative way within the web application. They handle tasks such as genre and rating mapping, date formatting, and generating YouTube trailer search links.</p><br>
+
+
+<hr>JSON in JS</h3>
+<br>
+<p>In code, "JSON" stands for "JavaScript Object Notation." JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is often used in programming to represent structured data, such as configuration settings, data exchanged between a server and a client, or data stored in files.</p><br>
 
 
 
