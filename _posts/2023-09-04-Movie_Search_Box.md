@@ -105,6 +105,7 @@ courses: { compsci: {week: 3} }
             "ta": "Tamil",
             "zh": "Chinese",
             "ko": "Korean",
+            "ml": "Malayalam",
             // Add more language mappings as needed
         };
 
