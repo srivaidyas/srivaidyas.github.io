@@ -17,8 +17,6 @@ courses: { compsci: {week: 3} }
 
 
 
-
-
 <html>
 <html lang="en">
 <head>
@@ -219,6 +217,7 @@ courses: { compsci: {week: 3} }
     </script>
 </body>
 </html>
+
 
 
 
