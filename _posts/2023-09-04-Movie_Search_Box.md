@@ -78,6 +78,7 @@ courses: { compsci: {week: 3} }
                10766: "Soap",
                10767: "Talk",
                10768: "War & Politics",
+               878: "Science Fiction",
             // Add more genre mappings as needed
         };
 
@@ -223,8 +224,6 @@ courses: { compsci: {week: 3} }
     </script>
 </body>
 </html>
-
-
 
 
 
