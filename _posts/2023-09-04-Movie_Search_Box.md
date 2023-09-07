@@ -341,11 +341,16 @@ courses: { compsci: {week: 3} }
 
 <hr>
 
+<h3>Error and tried fixes</h3>
+<br>
+<p>There were just a few errors with this code here and there. One of the major ones included the way the API data was sourced and for what it was used as well. For eaxmple the directors and cast were tried to be extracted from the data base and into the website but always results in a N/A or failed result. Even now as we are still trying to recify the code, the MPAA rating alawys results in a N/A or false result even after previous mappings were tried.
+THe second mojor error, well not really an error but rather something this code does not include is options, there are many movies with the exact same name around the world, and typing on that the user intended to see might yeild differed results from time to time. So yes these were the two -three major errors and bugs we faced while drafting this code. </p>
 
-
-<h4> Attribution </h4>
+<br><hr>
+<br>
+<h3> Attribution </h3>
 
 <center>
-<img src = "_site/images/hellowe.png" alt= "The TMDb logo" width= "200" height= "200">
-</center>
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tmdb.new.logo.svg/1024px-Tmdb.new.logo.svg.png?20200406190906" alt= "The TMDb logo" width= "200" height= "165">
+</center><br><br>
 This product uses the TMDB API but is not endorsed or certified by TMDB
