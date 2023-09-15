@@ -4,7 +4,7 @@ comments: False
 layout: post
 title: 1.4 Errors
 description: This is a list of error and correcting them form 1.4.
-type: tangibles =
+type: tangibles 
 courses: {'compsci': {'week': 4}}
 ---
 
