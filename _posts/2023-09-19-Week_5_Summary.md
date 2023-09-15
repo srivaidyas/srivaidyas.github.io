@@ -2,15 +2,15 @@
 toc: true
 comments: false
 layout: post
-title: Week 4 Summary
-description: This is the summary for week 4 with uses the utterence bot
+title: Week 5 Summary
+description: These are the summary for week 5 with uses the utterence bot
 type: plans
-courses: { compsci: {week: 4} }
+courses: { compsci: {week: 5} }
 ---
 
 
-#### Summary for week 4
-These plans include detailed steps for week 3 assignment
+#### Summary for week 5
+These summary include detailed steps for week 5 assignment
 
 [Link to utterence](https://github.com/srivaidyas/student/issues/2)
 
@@ -22,9 +22,5 @@ These plans include detailed steps for week 3 assignment
     crossorigin="anonymous"
     async>
 </script>
-
-<br>
-
-<img src = "_site/images/Scrum Process.png">
 
 
