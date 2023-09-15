@@ -226,125 +226,22 @@ courses: { compsci: {week: 3} }
 </html>
 
 
-
-
-
-
-<br><br><br><br><br>
-<hr>
-<h3> Parts of the code </h3>
-
-
-1. <b><mark>fetchMovieData(searchTerm)</mark></b> :This function is responsible for fetching and displaying movie/TV series data based on the search term entered by the user.<br><br>
-
-2. <b><mark>getGenre(genreIds)</mark></b>: This function takes an array of genre IDs and returns a string containing the corresponding genre names. It's used to map genre IDs to their names.<br><br>
-
-3. <b><mark>getMPAARating(contentRatings)</mark></b>: This function takes content ratings data and returns the MPAA rating in a user-friendly format. It maps MPAA ratings from codes to their full names.<br><br>
-
-4. <b><mark>getOriginalLanguage(languageCode)</mark></b>: This function takes a language code and returns the full name of the language. It's used to display the original language of the movie/TV series.<br><br>
-
-5. <b><mark>formatDate(dateString)</mark></b>: This function formats a date string (release date) in the "month/day/year" format. It's used to format the release date for display.<br><br>
-
-6. <b><mark>getYouTubeTrailerLink(searchTerm)</mark></b>: This function constructs a YouTube trailer search link based on the search term entered by the user. It's used to provide a link to search for the movie's trailer on YouTube.<br><br>
-
-
+<br><br><br><br>
+<br><br>
 
 <hr>
 
-<h3> Different mapping used in this code</h3>
-
-<br>
-
-1. <mark>Genre mapping</mark> <br>
-            28: "Action", <br>
-            12: "Adventure",<br>
-            16: "Animation",<br>
-            35: "Comedy",<br>
-            80: "Crime",<br>
-            99: "Documentary",<br>
-            18: "Drama",<br>
-            10751: "Family",<br>
-            14: "Fantasy",<br>
-            36: "History",<br>
-            27: "Horror",<br>
-            10402: "Music",<br>
-            9648: "Mystery",<br>
-            10749: "Romance",<br>
-            878: "Science Fiction",<br>
-            10770: "TV Movie",<br>
-            53: "Thriller",<br>
-            10752: "War",<br>
-            37: "Western",<br>
-<br>
-
-2. <mark>Language Mapping</mark> <br>
-            "en": "English",<br>
-            "es": "Spanish",<br>
-            "fr": "French",<br>
-            "de": "German",<br>
-            "el": "Greek",<br>
-            "ga": "Irish",<br>
-            "hi": "Hindi",<br>
-            "ru": "Russian",<br>
-            "ta": "Tamil",<br>
-            "zh": "Chinese",<br>
-            "ko": "Korean",<br>
-
-<br>
-
-3.<mark> MPAA rating mapping </mark> <br>
-            "G": "General Audiences",<br>
-            "PG": "Parental Guidance Suggested",<br>
-            "PG-13": "Parents Strongly Cautioned",<br>
-            "TV-14": "For TV Shows above 14",<br>
-            "R": "Restricted",<br>
-            "NC-17": "Adults Only",<br>
-            "NR": "Not Rated",<br>
-            "Unrated": "Unrated",<br>
-
-<br>
-<hr>
-
-<h3>Code explanation</h3>
-
-<p>This JavaScript code is designed to create a simple web application for searching and displaying details about movies and TV series using the TMDb (The Movie Database) API. The code begins by defining <mark> event listeners, </mark> specifically for a search button click. When the search button is clicked, it triggers a function to fetch and display movie/TV series data.</p><br>
-
-<p>Inside the <mark>fetchMovieData function </mark>, the TMDb API URL is constructed based on the user's search term, and a fetch request is made to the API. The received JSON data is processed to extract relevant information about the first result, such as title, overview, ratings, release date, genre, MPAA rating, original language, and poster image.</p><br>
-
-<p>Notably, the release date is formatted using the formatDate function, and the genre and MPAA rating are looked up in predefined mapping objects (genreMap and mpaaRatingMap) to provide human-readable values. The code also constructs a link to search for a trailer on YouTube based on the user's search term.</p><br>
-
-<p>The final result is an HTML page where users can enter a movie or TV series name, click the search button, and receive a summary of the selected media's details. If no results are found, a message indicating so is displayed. The code is structured to make the user interface clean and straightforward while providing rich information about the searched media.</p><br>
-
-<hr>
-<h3>Utility function explanation</h3>
-
-<p>This code defines several utility functions that are used within the main code to format and retrieve specific information:</p><br>
-
-1. <mark>getGenre(genreIds)</mark>: This function takes an array of genre IDs as input and maps them to their corresponding genre names using the genreMap object. If a genre ID is not found in the map, it defaults to "Unknown" and returns a comma-separated string of genre names.<br><br>
-
-2. <mark>getMPAARating(contentRatings)</mark>: This function extracts the MPAA (Motion Picture Association of America) rating from the contentRatings array. It looks for the rating in the first element of the array and maps it to a human-readable rating using the mpaaRatingMap object. If no rating is found, it returns "N/A."<br><br>
-
-3. <mark> getOriginalLanguage(languageCode)</mark>: This function takes a language code as input and looks up the full language name from the languageMap object. If the language code is not found, it returns "N/A."<br><br>
-
-4. <mark>formatDate(dateString)</mark>: This function formats a date string (in the format provided by the TMDb API) into a more readable "Month/Day/Year" format using JavaScript's toLocaleDateString method. If the input date string is empty or undefined, it returns "Release Date: N/A."<br><br>
-
-5. <mark>getYouTubeTrailerLink(searchTerm) </mark>: This function constructs a YouTube search query for a trailer based on the user's search term. It appends " trailer" to the search term, encodes it for a URL, and returns a URL to the YouTube search results for that query.<br><br>
-
-<p>These utility functions are crucial for transforming and presenting data retrieved from the TMDb API in a user-friendly and informative way within the web application. They handle tasks such as genre and rating mapping, date formatting, and generating YouTube trailer search links.</p><br>
-
-<hr>
-
-<h3>JSON in JS</h3>
-<br>
-<p>In code, "JSON" stands for <mark>"JavaScript Object Notation."</mark> JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is often used in programming to represent structured data, such as configuration settings, data exchanged between a server and a client, or data stored in files.</p><br>
+<script src="https://utteranc.es/client.js"
+    repo="srivaidyas/student"
+    issue-term="pathname"
+    label="comments"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
 
 
-<hr>
 
-<h3>Error and tried fixes</h3>
-<br>
-<p>There were just a few errors with this code here and there. One of the major ones included the way the API data was sourced and for what it was used as well. For eaxmple the directors and cast were tried to be extracted from the data base and into the website but always results in a N/A or failed result. Even now as we are still trying to recify the code, the MPAA rating alawys results in a N/A or false result even after previous mappings were tried.
-THe second mojor error, well not really an error but rather something this code does not include is options, there are many movies with the exact same name around the world, and typing on that the user intended to see might yeild differed results from time to time. So yes these were the two -three major errors and bugs we faced while drafting this code. </p>
 
 <br><hr>
 <br>
