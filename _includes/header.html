@@ -1,7 +1,43 @@
 <header class="site-header">
+  <style>
+    /* CSS styles for the top navigation bar */
+    .top-nav {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      border-radius: 15px; /* Add curved borders */
+    }
+
+    .top-nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .top-nav li {
+      display: inline;
+      margin-right: 10px; /* Reduce the space between links */
+    }
+
+    .top-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px; /* Adjust padding for a smaller appearance */
+      border-radius: 10px; /* Add curved borders to links */
+      transition: background-color 0.3s; /* Smooth background color transition */
+
+      /* Hover effect */
+      transition: background-color 0.3s;
+    }
+
+    .top-nav a:hover {
+      background-color: #9d9999; /* Change background color on hover */
+    }
+  </style>
 
   <div id="header">
-    <nav>
+    <nav class="top-nav">
       <ul>
         <li class="fork"><a href="{{site.baseurl}}/">Home</a></li>
         <li class="fork"><a href="{{site.baseurl}}/compsci">CompSci</a></li>

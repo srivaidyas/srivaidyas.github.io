@@ -2,15 +2,15 @@
 toc: true
 comments: false
 layout: post
-title: Week 7 Plans
-description: These are the plans for week 7 with uses the utterence bot
+title: Week 8 Plans
+description: These are the plans for week 8 with uses the utterence bot
 type: plans
-courses: { compsci: {week: 7} }
+courses: { compsci: {week: 8} }
 ---
 
 
-#### Plans for week 7
-These plans include detailed steps for week 7 assignment
+#### Plans for week 8
+These plans include detailed steps for week 8 assignment
 
 [Link to utterence](https://github.com/srivaidyas/student/issues/2)
 
